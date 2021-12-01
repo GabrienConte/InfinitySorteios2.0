@@ -10,7 +10,7 @@
     tools:layout_editor_absoluteY="-116dp">
 
     <Button
-        android:id="@+id/btn1num"
+        android:id="@+id/btnNum"
         android:layout_width="158dp"
         android:layout_height="65dp"
         android:text="Sorteio de números "
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.406" />
 
     <Button
-        android:id="@+id/btn2nom"
+        android:id="@+id/btnNome"
         android:layout_width="158dp"
         android:layout_height="65dp"
         android:text="Sorteio de nomes "
@@ -34,10 +34,10 @@
         app:layout_constraintVertical_bias="0.519" />
 
     <Button
-        android:id="@+id/btn3gp"
+        android:id="@+id/btnGp"
         android:layout_width="158dp"
         android:layout_height="65dp"
-        android:text="Sorteio de Grupo"
+        android:text="Formar Grupo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.752" />
 
     <Button
-        android:id="@+id/btn4coc"
+        android:id="@+id/btnCC"
         android:layout_width="158dp"
         android:layout_height="65dp"
         android:text="Cara ou Coroa "
