@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class Tela1 extends AppCompatActivity {
 
@@ -32,7 +31,7 @@ public class Tela1 extends AppCompatActivity {
             //Intent:
             //- recurso utilizado para criar/gerenciar Activities
             //- posso passar informações de uma activity para outra a partir da intent
-            Intent vIntent = new Intent(this, TelaCC.class);
+            Intent vIntent = new Intent(this, TelaGP.class);
             startActivity(vIntent);
         });
     }
