@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class Tela1 extends AppCompatActivity {
+public class TelaMenu extends AppCompatActivity {
 
     private Button btnNome;
     private Button btnGp;
@@ -13,7 +13,7 @@ public class Tela1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela1);
+        setContentView(R.layout.activity_tela_menu);
 
         btnNome = findViewById(R.id.btnNome);
 

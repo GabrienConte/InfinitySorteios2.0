@@ -16,7 +16,7 @@
             android:name=".TelaNomes"
             android:exported="false" />
         <activity
-            android:name=".Tela1"
+            android:name=".TelaMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

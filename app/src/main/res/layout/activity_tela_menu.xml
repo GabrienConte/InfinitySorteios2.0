@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2C2F33"
-    tools:context=".Tela1"
+    tools:context=".TelaMenu"
     tools:layout_editor_absoluteX="42dp"
     tools:layout_editor_absoluteY="-116dp">
 
