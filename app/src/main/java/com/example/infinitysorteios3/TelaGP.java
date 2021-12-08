@@ -44,35 +44,45 @@ public class TelaGP extends AppCompatActivity {
 
     private String GerarSorteioGrupo(String listaItens, int qtdGrupos){
         Random random = new Random();
-        String[] nomes = listaItens.split(",");
-        List<Integer> listSelecionados = new ArrayList<Integer>();
+        String[] itens = listaItens.split(",");
         String result = "";
 
         if(qtdGrupos < 1 ){
             return "Quantidade de grupos deve ser maior que 0";
         }
-        if (qtdGrupos > nomes.length){
+        if (qtdGrupos > itens.length){
             return "Quantidade de grupos deve ser menor que o número de itens da lista";
         }
+        if (itens.length % qtdGrupos != 0){
+            return "A quantidade de itens deve ser divida exatamente pela quantidade de grupos";
+        }
+        int QtdItensGp = itens.length / qtdGrupos;
 
-        do {
-            boolean adicionarLista = true;
-            int indexSorteada = random.nextInt(nomes.length);
-            for (int i : listSelecionados){
-                if (i == indexSorteada) {
-                    adicionarLista = false;
-                    break;
+        List<Integer> listVerificacao = new ArrayList<Integer>();
+        for (int i = 0; i < qtdGrupos; i++) {
+
+            List<Integer> listGrupo = new ArrayList<Integer>();
+            String partialResult = "";
+            do {
+                boolean adicionarLista = true;
+                int indexSorteada = random.nextInt(itens.length);
+                for (int item : listVerificacao) {
+                    if (item == indexSorteada) {
+                        adicionarLista = false;
+                        break;
+                    }
                 }
-            }
-            if (adicionarLista) {
-                listSelecionados.add(indexSorteada);
-                result = result + nomes[indexSorteada] + ", ";
-            }
-        } while (listSelecionados.size() < qtdGrupos);
-
-        StringBuffer resultFormatado = new StringBuffer(result);
-        resultFormatado.deleteCharAt(resultFormatado.length()-2);
-
-        return resultFormatado.toString();
+                if (adicionarLista) {
+                    listGrupo.add(indexSorteada);
+                    listVerificacao.add(indexSorteada);
+                    partialResult = partialResult + itens[indexSorteada] + ", ";
+                }
+            } while (listGrupo.size() < QtdItensGp);
+            int numerogrupo = i + 1;
+            StringBuffer resultPartialFormatado = new StringBuffer(partialResult);
+            resultPartialFormatado.deleteCharAt(resultPartialFormatado.length()-2);
+            result = result + "-> Grupo " + numerogrupo + ": " + resultPartialFormatado + "\n";
+        }
+        return result;
     }
 }

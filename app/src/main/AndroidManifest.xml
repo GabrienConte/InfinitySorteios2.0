@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InfinitySorteios3">
         <activity
+            android:name=".TelaNumeros"
+            android:exported="false" />
+        <activity
             android:name=".TelaGP"
+            android:exported="false" />
+        <activity
+            android:name=".TelaCC"
             android:exported="false" />
         <activity
             android:name=".TelaNomes"
